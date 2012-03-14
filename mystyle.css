@@ -1,0 +1,23 @@
+p {
+    font-size: 14px
+    line-height: 1.5;
+}
+
+#header {
+
+}
+
+#main {
+    float: left;
+    width: 800px;
+}
+
+#sidebar {
+    float: right;
+    width: 600px;
+}
+
+#footer {
+ 
+
+}

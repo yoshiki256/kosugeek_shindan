@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<title>ギー杉相性診断</title>
+	<link rel="stylesheet" href="mystyle.css">
+</head>
+<body style="text-align:center;">
+<div id="header"></div>
+	<div id="main">
+	<h1>ギー杉相性診断</h1>
+	<p><input type="text" id="name" value=""></p>
+	<p><input type="button" id="shindan" value="診断!"></p>
+	<h2>診断結果</h2>
+	<h3>あなたが最も相思相愛になれるギー杉住民は、、、</h3>
+	<p id="result">こちらに結果が表示されます。</p>
+	<div id="tweet"></div>
+	<script>
+		$('#shindan').click(function(){
+			var name = $('#name').val();
+			var types = ['パツキン女性が大好きな@Dice0725', 'ロリコンな@kitaindia','アイマスプロデューサーな@nakameP','巨乳が大好きな@yoshiki256','ポケモンマスターな@tivrsky','教祖様な@hirochachacha','プリキュアエバンジェリストな@100_200','いつもハメハメしたがっている@macky_sak','ハンターハンターのゴトウな@ltd','オーナーな@effy','うんこもらしな@_shotamiura','@szkmtkさんキラーな@morimoreish'];
+			var type = types[Math.floor(Math.random() * types.length)];
+			var result = name + 'さんは「' + type + '」と相思相愛です!';
+			$('#result').text(result);
+			var tweetLink = '<a href="https://twitter.com/intent/tweet?text='+ encodeURIComponent(result) +'&hashtags=kosugeek + &url=http://www40.atpages.jp/~ryokutya48/kosugeek_shindan/">ツイートしてもらえるとギー杉たんが喜びます♪</a>';
+			$('#tweet').html(tweetLink);
+      	});
+	</script>
+	</div>
+	<div id="sidebar">
+	<img src="image/black.jpg" width="256" height="256"><br>
+	<img src="image/tan.JPG" width="240" height="240"><br>
+	♡ギー杉たん♡<br>
+	<img src="image/red.jpg" width="256" height="256"><br>
+	
+	
+	
+	</div>
+<div id="footer"></div>	
+</body>	
+</html>
